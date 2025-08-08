@@ -73,7 +73,7 @@ Frontend desarrollado en **Angular 19** con **Tailwind CSS 3.4.17** para crear u
 
 # Ui del proyecto
 
-![alt text](<Captura de pantalla 2025-08-07 193355.png>)
+![Captura de pantalla](public/Captura%20de%20pantalla%202025-08-07%20193355.png)
 
 ## 👤 Autor
 
