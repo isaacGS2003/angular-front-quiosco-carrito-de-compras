@@ -1,0 +1,21 @@
+<!-- Spinner solo durante la primera carga -->
+<div *ngIf="isFirstLoad" class="w-full h-full flex justify-center items-center py-10">
+  <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-indigo-600 border-solid"></div>
+</div>
+
+<!-- Contenido cuando ya cargó la primera vez -->
+<ng-container *ngIf="!isFirstLoad">
+  <h1 class="text-4xl font-black">{{ (categoriaActual$ | async)?.nombre ?? '' }}</h1>
+
+  <p class="text-2xl my-10">
+    Elige y personaliza tu pedido a continuación
+  </p>
+
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 pb-3">
+    <ng-container *ngFor="let producto of productosFiltrados$ | async">
+      <!-- <div class="transition duration-300 hover:scale-105"> -->
+      <app-producto [producto]="producto" [botonAgregar]="true"></app-producto>
+      <!-- </div> -->
+    </ng-container>
+  </div>
+</ng-container>

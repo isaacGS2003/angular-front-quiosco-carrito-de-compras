@@ -1,0 +1,15 @@
+<div class="border p-3 shadow bg-white">
+  <img [src]="producto?.imagen + '.jpg'" [alt]="'imagen' + producto?.nombre">
+  <div class="p-5">
+    <h3 class="text-2xl font-bold">{{producto?.nombre}}</h3>
+    <p class="mt-5 font-black text-4xl text-amber-500">{{producto?.precio | currency }}</p>
+
+    <button *ngIf="botonAgregar && !botonDisponible" type="button"
+      class="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold"
+      (click)="abrirModal()">Agregar</button>
+
+    <button *ngIf="botonDisponible && !botonAgregar" type="button"
+      class="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold"
+      (click)="handleClickDisponibilidad(producto!.id)">Producto Agotado</button>
+  </div>
+</div>

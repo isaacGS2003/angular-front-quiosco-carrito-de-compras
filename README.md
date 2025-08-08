@@ -1,59 +1,83 @@
-# FrontQuiosco
+# Proyecto Frontend Angular 19 - Quiosco Carrito de Compras
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Frontend desarrollado en **Angular 19** con **Tailwind CSS 3.4.17** para crear una interfaz rápida, responsiva y moderna.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologías utilizadas
 
-```bash
-ng serve
-```
+- Angular 19
+- Tailwind CSS 3.4.17
+- TypeScript
+- HTML5 & CSS3
+- (Opcional: Axios / HttpClient para consumir APIs)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📋 Requisitos previos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js v16+ (recomendado Node 18+)
+- npm o yarn instalado
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🔧 Instalación y puesta en marcha
 
-```bash
-ng generate --help
-```
+1. Clonar el repositorio:
 
-## Building
+   ```bash
+   https://github.com/isaacGS2003/angular-front-quiosco-carrito-de-compras.git
 
-To build the project run:
+   ```
 
-```bash
-ng build
-```
+2. Instalar dependencias:
+   npm install o si usas yarn: yarn install
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. Levantar servidor de desarrollo:
+   ng serve
 
-## Running unit tests
+4. Luego abre en el navegador:
+   http://localhost:4200
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🎨 Tailwind CSS
 
-```bash
-ng test
-```
+- La configuración de Tailwind está en el archivo tailwind.config.js.
 
-## Running end-to-end tests
+- Para compilar los estilos, Angular ya está configurado con Tailwind (postcss) para que funcione automáticamente al levantar el servidor.
 
-For end-to-end (e2e) testing, run:
+- Si haces cambios en la configuración de Tailwind, reinicia el servidor Angular para que tome los cambios.
 
-```bash
-ng e2e
-```
+## 🛠 Scripts disponibles
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- ng serve - Levantar servidor de desarrollo con hot reload
 
-## Additional Resources
+- ng build - Construir versión de producción (los archivos quedarán en dist/)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- ng test - Ejecutar pruebas unitarias con Karma/Jasmine
+
+- ng lint - Ejecutar linter para revisar calidad de código
+
+## 📁 Estructura principal
+
+- /src/app - Código principal de componentes, servicios y módulos
+
+- /src/assets - Imágenes, fuentes y otros assets
+
+- /src/environments - Configuración para ambientes (environment.ts, environment.prod.ts)
+
+- tailwind.config.js - Configuración de Tailwind CSS
+
+- angular.json - Configuración del proyecto Angular
+
+- package.json - Dependencias y scripts npm
+
+# Ui del proyecto
+
+![alt text](<Captura de pantalla 2025-08-07 193355.png>)
+
+## 👤 Autor
+
+Isaac Gonzalez
+isaacgonzalezgs2003@gmail.com
+
+# Gracias por revisar el proyecto. Para cualquier duda o colaboración, contáctame.

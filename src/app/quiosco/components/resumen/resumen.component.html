@@ -1,0 +1,25 @@
+<aside class="w-72 h-screen overflow-y-scroll p-5">
+  <h1 class="text-4xl font-black">Mi Pedido</h1>
+  <p class="text-lg my-5">
+    Aui podrás ver el resumen y totales de tu pedido
+  </p>
+  <div class="py-10">
+    <p *ngIf="pedido?.length === 0; else total" class="text-center text-2xl">No hay elementos en tu pedido
+      aún
+    </p>
+    <ng-template #total>
+      <app-resumen-pedido *ngFor="let producto of pedido" [producto]="producto"></app-resumen-pedido>
+    </ng-template>
+
+    <p class="text-xl mt-10">Total: {{totalPagar | currency }}</p>
+
+    <form class="w-full" (submit)="handleSubmit($event)">
+      <div class="mt-5">
+        <input type="submit" s [disabled]="pedido?.length === 0" class="bg-indigo-600 disabled:bg-gray-400 hover:bg-indigo-800 disabled:hover:bg-gray-400
+        px-5 py-2 rounded uppercase font-bold text-white text-center w-full cursor-pointer disabled:cursor-default"
+          value="Confirmar Pedido">
+      </div>
+    </form>
+
+  </div>
+</aside>

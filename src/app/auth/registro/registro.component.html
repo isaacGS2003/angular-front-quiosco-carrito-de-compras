@@ -1,0 +1,43 @@
+<h1 class="text-4xl font-black">Crea tu Cuenta</h1>
+<p class="">Crea tu Cuenta llenando el formulario</p>
+
+<div class="bg-white shadow-md rounded-md mt-10 px-5 py-10">
+  <form [formGroup]="myForm" (ngSubmit)="handleSubmit()">
+
+    <ng-container *ngIf="errores.length > 0">
+      <app-alerta *ngFor="let error of errores" [children]="error"></app-alerta>
+    </ng-container>
+
+    <div class="mb-4">
+      <label for="name" class="text-slate-800">Nombre:</label>
+      <input type="text" formControlName="name" id="name" name="name" placeholder="Tu Nombre"
+        class="mt-2 w-full p-3 bg-gray-50">
+    </div>
+
+    <div class="mb-4">
+      <label for="email" class="text-slate-800">Email:</label>
+      <input type="email" formControlName="email" id="email" name="email" placeholder="Tu Email"
+        class="mt-2 w-full p-3 bg-gray-50">
+    </div>
+
+    <div class="mb-4">
+      <label for="password" class="text-slate-800">Password:</label>
+      <input type="password" formControlName="password" id="password" name="password" placeholder="Tu Password"
+        class="mt-2 w-full p-3 bg-gray-50">
+    </div>
+
+    <div class="mb-4">
+      <label for="password_confirmation" class="text-slate-800">Repetir Password:</label>
+      <input type="password" formControlName="password_confirmation" id="password_confirmation"
+        name="password_confirmation" placeholder="Repetir Password" class="mt-2 w-full p-3 bg-gray-50">
+    </div>
+
+    <input type="submit" value="Crear Cuenta"
+      class="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer">
+
+  </form>
+</div>
+
+<nav class="mt-5">
+  <a routerLink="/auth/login">Ya tienes cuenta? Inicia Sesión</a>
+</nav>

@@ -1,0 +1,5 @@
+<div class="flex items-center gap-4 border w-full p-3 hover:bg-amber-400 cursor-pointer"
+  [ngClass]="{ 'bg-amber-400': (categoriaActual$ | async)?.id === categoria.id }" (click)="seleccionarCategoria()">
+  <img [src]="'icono_' + categoria.icono + '.svg'" alt="Imagen Icono" class="w-12">
+  <p class="text-lg font-bold cursor-pointer truncate">{{ categoria.nombre }}</p>
+</div>
